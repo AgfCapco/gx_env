@@ -1,0 +1,887 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "burgiss-import-clean-test-1.parquet",
+      "data_connector_name": "default_inferred_data_connector_name",
+      "datasource_name": "my_datasource"
+    },
+    "batch_markers": {
+      "ge_load_time": "20230113T091641.681634Z",
+      "pandas_data_fingerprint": "3409adf99b659267122e2706ab4e7251"
+    },
+    "batch_spec": {
+      "path": "/Users/faridagouzzal/Documents/VS_WorkSpaces/virSpaces/gx_venv/great_expectations/../data/burgiss-import-clean-test-1.parquet"
+    },
+    "checkpoint_id": null,
+    "checkpoint_name": "burgiss-import-clean-test-1.parquet_paa_burgiss_suite",
+    "expectation_suite_name": "paa_burgiss_suite",
+    "great_expectations_version": "0.15.43",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2023-01-13T10:16:41.667348+00:00"
+    },
+    "validation_id": null,
+    "validation_time": "20230113T091641.760035Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_unique",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Holding_GUID"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 2,
+            "value": "4M579q57-3803-76x4-b3c1-Lq9Us1D5l1g2"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          498
+        ],
+        "partial_unexpected_list": [
+          "4M579q57-3803-76x4-b3c1-Lq9Us1D5l1g2",
+          "4M579q57-3803-76x4-b3c1-Lq9Us1D5l1g2"
+        ],
+        "unexpected_count": 2,
+        "unexpected_percent": 0.4008016032064128,
+        "unexpected_percent_nonmissing": 0.4008016032064128,
+        "unexpected_percent_total": 0.4008016032064128
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Holding_GUID"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Holding_GUID"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {},
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Asset_IsLiquidated",
+          "condition_parser": "pandas",
+          "row_condition": "Asset_LiquidationDate!=\"\"",
+          "value_set": [
+            "TRUE"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": false
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "unexpected_count": 499,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Holding_Status",
+          "condition_parser": "pandas",
+          "row_condition": "Holding_ExitDate==\"\"",
+          "value_set": [
+            "Held"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 0,
+        "missing_count": 0,
+        "missing_percent": null,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": null,
+        "unexpected_percent_nonmissing": null,
+        "unexpected_percent_total": null
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_in_set",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Holding_Status",
+          "value_set": [
+            "Unknown"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 11,
+        "missing_percent": 2.2044088176352705,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Holding_Status"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {},
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Entity_Name",
+          "max_value": 40
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_be_between",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Entity_ShortDescription",
+          "max_value": 65
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Asset_GUID",
+          "value": 36
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Asset_GUID"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Manager_GUID",
+          "value": 36
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_value_lengths_to_equal",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Investment_ID",
+          "value": 6
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": 6608
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608,
+          6608
+        ],
+        "unexpected_count": 43,
+        "unexpected_percent": 8.617234468937877,
+        "unexpected_percent_nonmissing": 8.617234468937877,
+        "unexpected_percent_total": 8.617234468937877
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Asset_AssetClass_Tier1",
+          "value_set": [
+            "Real Assets",
+            "Equity"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 4,
+            "value": "4WD Tractor"
+          },
+          {
+            "count": 3,
+            "value": "Hydraulic Excavator"
+          },
+          {
+            "count": 3,
+            "value": "Wheel Loader"
+          },
+          {
+            "count": 2,
+            "value": "2WD Tractor"
+          },
+          {
+            "count": 2,
+            "value": "Mini Excavator"
+          },
+          {
+            "count": 1,
+            "value": "Baler"
+          },
+          {
+            "count": 1,
+            "value": "Crawler Loader"
+          },
+          {
+            "count": 1,
+            "value": "Crawler Tractor"
+          },
+          {
+            "count": 1,
+            "value": "Cultivator"
+          },
+          {
+            "count": 1,
+            "value": "Midi Excavator"
+          },
+          {
+            "count": 1,
+            "value": "Multi Terrain Loader"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "Crawler Loader",
+          "Hydraulic Excavator",
+          "2WD Tractor",
+          "Wheel Loader",
+          "Hydraulic Excavator",
+          "Midi Excavator",
+          "Baler",
+          "Wheel Loader",
+          "2WD Tractor",
+          "Crawler Tractor",
+          "Mini Excavator",
+          "Wheel Loader",
+          "Mini Excavator",
+          "4WD Tractor",
+          "4WD Tractor",
+          "Cultivator",
+          "Multi Terrain Loader",
+          "4WD Tractor",
+          "4WD Tractor",
+          "Hydraulic Excavator"
+        ],
+        "unexpected_count": 499,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Asset_VehicleType",
+          "value_set": [
+            "Fund",
+            "Fund of funds",
+            "Direct"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": "ojDp"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "partial_unexpected_list": [
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp",
+          "ojDp"
+        ],
+        "unexpected_count": 499,
+        "unexpected_percent": 100.0,
+        "unexpected_percent_nonmissing": 100.0,
+        "unexpected_percent_total": 100.0
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_in_set",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Asset_Industry",
+          "value_set": [
+            "Unknown"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [
+          {
+            "count": 20,
+            "value": "Unknown"
+          }
+        ],
+        "partial_unexpected_index_list": [
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268
+        ],
+        "partial_unexpected_list": [
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown",
+          "Unknown"
+        ],
+        "unexpected_count": 27,
+        "unexpected_percent": 5.410821643286573,
+        "unexpected_percent_nonmissing": 5.410821643286573,
+        "unexpected_percent_total": 5.410821643286573
+      },
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Report_DateExecuted"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {},
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Holding.ExitDate"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {},
+      "success": false
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Report_EndDate"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {},
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Portfolio_GUID"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 499,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_of_type",
+        "kwargs": {
+          "batch_id": "506407c37c4fed505a5b3a704bddefb8",
+          "column": "Asset_Vintage",
+          "type_": "int64"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 21,
+    "success_percent": 66.66666666666666,
+    "successful_expectations": 14,
+    "unsuccessful_expectations": 7
+  },
+  "success": false
+}
